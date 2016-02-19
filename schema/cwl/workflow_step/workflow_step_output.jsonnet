@@ -20,5 +20,5 @@ record("WorkflowStepOutput") {
       connect the output value to downstream parameters.
     |||) +
     field("id", Avro.string),
-  ]
+  ],
 }

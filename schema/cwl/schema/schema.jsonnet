@@ -52,5 +52,5 @@ record("Schema") {
       Avro.string,
       Avro.array([Datatype, self.name, Avro.string]),
     ]),
-  ]
+  ],
 }

@@ -22,15 +22,15 @@ record("FileDef") {
     doc(|||
       If the value is a string literal or an expression which evaluates to a
       string, a new file must be created with the string as the file contents.
-      
+
       If the value is an expression that evaluates to a File object, this
       indicates the referenced file should be added to the designated output
       directory prior to executing the tool.
-      
+
       Files added in this way may be read-only, and may be provided
       by bind mounts or file system links to avoid
       unnecessary copying of the input file.
     |||) +
     field("fileContent", [Avro.string, Expression]),
-  ]
+  ],
 }

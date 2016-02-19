@@ -8,4 +8,4 @@ local doc = Util.doc;
 local CWL = import "../../cwl.jsonnet";
 local InputSchema = CWL.classes.InputSchema;
 
-InputSchema + record("CommandInputSchema") 
+InputSchema + record("CommandInputSchema")

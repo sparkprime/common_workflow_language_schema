@@ -20,7 +20,7 @@ doc(|||
 |||) +
 
 Binding + record("CommandOutputBinding") {
-  fields +: [
+  fields+: [
     doc(|||
       Find files relative to the output directory, using POSIX glob(3)
       pathname matching.  If provided an array, find files that match any
@@ -44,5 +44,5 @@ Binding + record("CommandOutputBinding") {
       `contents` field.
     |||) +
     field("outputEval", [Avro.Null, Expression]),
-  ]
+  ],
 }

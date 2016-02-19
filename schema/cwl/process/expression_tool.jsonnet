@@ -11,7 +11,7 @@ local Process = CWL.classes.Process;
 
 doc("Execute an expression as a process step.") +
 Process + record("ExpressionTool") {
-  fields +: [
+  fields+: [
     field("class", Avro.string),
 
     doc(|||
@@ -19,5 +19,5 @@ Process + record("ExpressionTool") {
       matches the output parameters of the ExpressionTool.
     |||) +
     field("expression", Expression),
-  ]
+  ],
 }

@@ -33,7 +33,7 @@ record("Process") {
 
   fields: [
     doc("The unique identifier for this process object.") +
-    field("id", [Avro.Null, Avro.string]), 
+    field("id", [Avro.Null, Avro.string]),
 
     doc(|||
       Defines the input parameters of the process. The process is ready to
@@ -78,7 +78,7 @@ record("Process") {
         ScatterFeatureRequirement,
         SchemaDefRequirement,
         SubworkflowFeatureRequirement,
-        ])
+      ]),
     ]),
 
     doc("A short, human-readable label of this process object.") +
@@ -86,5 +86,5 @@ record("Process") {
 
     doc("A long, human-readable description of this process object.") +
     field("description", [Avro.Null, Avro.string]),
-  ]
+  ],
 }

@@ -14,7 +14,7 @@ doc(|||
 |||) +
 
 ProcessRequirement + record("ExpressionEngineRequirement") {
-  fields +: [
+  fields+: [
     doc(|||
       Used to identify the expression engine in the `engine` field of
       Expressions.
@@ -37,5 +37,5 @@ ProcessRequirement + record("ExpressionEngineRequirement") {
       function definitions that will be called from CWL expressions.
     |||) +
     field("engineConfig", [Avro.Null, Avro.array([Avro.string])]),
-  ]
+  ],
 }

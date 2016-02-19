@@ -9,5 +9,5 @@ record("SchemaDef") {
   fields: [
     doc("The type name being defined.") +
     field("name", Avro.string),
-  ]
+  ],
 }

@@ -10,9 +10,9 @@ doc(|||
   (https://avro.apache.org/docs/current/spec.html#schemas) for detailed
   information.  In addition, CWL defines [`File`](#file) as a special record
   type.
-  
+
   ## Primitive types ##
-  
+
   * **null**: no value
   * **boolean**: a binary value
   * **int**: 32-bit signed integer
@@ -21,13 +21,13 @@ doc(|||
   * **double**: double precision (64-bit) IEEE 754 floating-point number
   * **bytes**: sequence of uninterpreted 8-bit unsigned bytes
   * **string**: Unicode character sequence
-  
+
   ## Complex types ##
   * **record**: An object with one or more fields defined by name and type
   * **enum**: A value from a finite set of symbolic values
   * **array**: An ordered sequence of values
   * **map**: An unordered collection of key/value pairs
-  
+
   ## File type ##
   See [File](#file) below.
 |||) +

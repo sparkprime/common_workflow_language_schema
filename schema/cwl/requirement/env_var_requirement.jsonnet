@@ -15,8 +15,8 @@ doc(|||
 |||) +
 
 ProcessRequirement + record("EnvVarRequirement") {
-  fields +: [
+  fields+: [
     doc("The list of environment variables.") +
     field("envDef", Avro.array([EnvironmentDef])),
-  ]
+  ],
 }

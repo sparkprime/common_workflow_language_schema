@@ -17,7 +17,7 @@ doc(|||
 |||) +
 
 OutputParameter + record("WorkflowOutputParameter") {
-  fields +: [
+  fields+: [
     doc(|||
       Specifies one or more workflow parameters that will provide this output
       value.
@@ -30,5 +30,5 @@ OutputParameter + record("WorkflowOutputParameter") {
     |||) +
     field("linkMerge", LinkMergeMethod) +
     default("MERGE_NESTED"),
-  ]
+  ],
 }

@@ -29,7 +29,7 @@ record("File") {
     |||) +
     field("checksum", Avro.array([Avro.Null, Avro.string])),
 
-    doc("Optional file size.") + 
+    doc("Optional file size.") +
     field("size", Avro.array([Avro.Null, Avro.long])),
 
     doc(|||
@@ -41,5 +41,5 @@ record("File") {
       rules apply.
     |||) +
     field("secondaryFiles", Avro.array([Avro.Null, File])),
-  ]
+  ],
 }

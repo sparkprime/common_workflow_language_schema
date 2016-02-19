@@ -23,7 +23,7 @@ record("Parameter") + {
       Avro.array([Datatype, Schema, Avro.string]),
     ]),
 
-    doc("A short, human-readable label of this parameter object.") + 
+    doc("A short, human-readable label of this parameter object.") +
     field("label", [Avro.Null, Avro.string]),
 
     doc("A long, human-readable description of this parameter object.") +

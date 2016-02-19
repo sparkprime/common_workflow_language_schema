@@ -9,9 +9,9 @@ local Parameter = CWL.classes.Parameter;
 Parameter + record("InputParameter") {
   binding:: Binding,
 
-  fields +: [
+  fields+: [
     field("id", "string"),
 
-    field("inputBinding", [Avro.Null, self.binding])
-  ]
+    field("inputBinding", [Avro.Null, self.binding]),
+  ],
 }

@@ -12,11 +12,11 @@ doc(|||
   Indicates that a workflow component should be run in a
   [Docker](http://docker.com) container, and specifies how to fetch or build
   the image.
-  
+
   If a CommandLineTool lists `DockerRequirement` under
   `hints` or `requirements`, it may (or must) be run in the specified Docker
   container.
-  
+
   The platform must first acquire or install the correct Docker image as
   specified by `dockerPull`, `dockerLoad` or `dockerFile`.
   The platform must execute the tool in the container using `docker run` with
@@ -25,15 +25,15 @@ doc(|||
   directory through the use of volume bind mounts.  The platform may rewrite
   file paths in the input object to correspond to the Docker bind mounted
   locations.
-  
+
   When running a tool contained in Docker, the workflow platform must not
   assume anything about the contents of the Docker container, such as the
   presence or absence of specific software, except to assume that the
   generated command line represents a valid command within the runtime
   environment of the container.
-  
+
   ## Interaction with other requirements ##
-  
+
   If [EnvVarRequirement](#envvarrequirement) is specified alongside a
   DockerRequirement, the environment variables must be provided to Docker
   using `--env` or `--env-file` and interact with the container's preexisting
@@ -41,7 +41,7 @@ doc(|||
 |||) +
 
 ProcessRequirement + record("DockerRequirement") {
-  fields +: [
+  fields+: [
     doc("Specify a Docker image to retrieve using `docker pull`.") +
     field("dockerPull", [Avro.Null, Avro.string]),
 
@@ -70,5 +70,5 @@ ProcessRequirement + record("DockerRequirement") {
       Docker container.
     |||) +
     field("dockerOutputDirectory", [Avro.Null, Avro.string]),
-  ]
+  ],
 }

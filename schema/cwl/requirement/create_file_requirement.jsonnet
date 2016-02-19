@@ -16,8 +16,8 @@ doc(|||
 |||) +
 
 ProcessRequirement + record("CreateFileRequirement") {
-  fields +: [
+  fields+: [
     doc("The list of files.") +
     field("fileDef", Avro.array([FileDef])),
-  ]
+  ],
 }

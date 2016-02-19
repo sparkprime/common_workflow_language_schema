@@ -14,12 +14,12 @@ doc("An output parameter for a CommandLineTool.") +
 OutputParameter + record("CommandOutputParameter") {
   binding:: CommandLineBinding,
 
-  fields +: [
+  fields+: [
     doc(|||
       Describes how to handle the concrete outputs of a process step (such as
       files created by a program) and describe them in the process output
       parameter.
     |||) +
     field("outputBinding", [Avro.Null, CommandOutputBinding]),
-  ]
+  ],
 }

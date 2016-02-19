@@ -18,47 +18,47 @@ doc(|||
   underlying process implementation (such as `CommandLineTool`) in the `run`
   field and connects the input and output parameters of the underlying
   process to workflow parameters.
-  
+
   # Scatter/gather #
-  
+
   To use scatter/gather,
   [ScatterFeatureRequirement](#scatterfeaturerequirement) must be specified
   in the workflow or workflow step requirements.
-  
+
   A \"scatter\" operation specifies that the associated workflow step or
   subworkflow should execute separately over a list of input elements.  Each
   job making up a scatter operaution is independent and may be executed
   concurrently.
-  
+
   The `scatter` field specifies one or more input parameters which will be
   scattered.  An input parameter may be listed more than once.  The declared
   type of each input parameter is implicitly wrapped in an array for each
   time it appears in the `scatter` field.  As a result, upstream parameters
   which are connected to scattered parameters may be arrays.
-  
+
   All output parameter types are also implicitly wrapped in arrays.  Each job
   in the scatter results in an entry in the output array.
-  
+
   If `scatter` declares more than one input parameter, `scatterMethod`
   describes how to decompose the input into a discrete set of jobs.
-  
+
     * **dotproduct** specifies that each of the input arrays are aligned and
         one element taken from each array to construct each job.  It is an
         error if all input arrays are not the same length.
-  
+
     * **nested_crossproduct** specifies the Cartesian product of the inputs,
         producing a job for every combination of the scattered inputs.  The
         output must be nested arrays for each level of scattering, in the
         order that the input arrays are listed in the `scatter` field.
-  
+
     * **flat_crossproduct** specifies the Cartesian product of the inputs,
         producing a job for every combination of the scattered inputs.  The
         output arrays must be flattened to a single level, but otherwise
         listed in the order that the input arrays are listed in the
         `scatter` field.
-  
+
   # Subworkflows #
-  
+
   To specify a nested workflow as part of a workflow step,
   [SubworkflowFeatureRequirement](#subworkflowfeaturerequirement) must be
   specified in the workflow or workflow step requirements.
@@ -112,5 +112,5 @@ record("WorkflowStep") {
 
     doc("Required if `scatter` is an array of more than one element.") +
     field("scatterMethod", [Avro.Null, ScatterMethod]),
-  ]
+  ],
 }

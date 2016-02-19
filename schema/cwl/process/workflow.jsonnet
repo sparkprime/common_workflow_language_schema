@@ -14,28 +14,28 @@ doc(|||
   step has input and output parameters defined by the `inputs` and `outputs`
   fields. A workflow executes as described in [execution model]
   (#workflow_graph).
-  
+
   # Dependencies #
-  
+
   Dependencies between parameters are expressed using the `source` field on
   [workflow step input parameters](#workflowstepinput) and [workflow output
   parameters](#workflowoutputparameter).
-  
+
   The `source` field expresses the dependency of one parameter on another
   such that when a value is associated with the parameter specified by
   `source`, that value is propagated to the destination parameter. When all
   data links inbound to a given step are fufilled, the step is ready to
   execute.
-  
+
   # Extensions #
-  
+
   [ScatterFeatureRequirement](#scatterfeaturerequirement) and
   [SubworkflowFeatureRequirement](#subworkflowfeaturerequirement) are
   available as standard extensions to core workflow semantics.
 |||) +
 
 Process + record("Workflow") {
-  fields +: [
+  fields+: [
     field("class", Avro.string),
 
     doc(|||
@@ -46,5 +46,5 @@ Process + record("Workflow") {
       are met.
     |||) +
     field("steps", Avro.array([WorkflowStep])),
-  ]
+  ],
 }

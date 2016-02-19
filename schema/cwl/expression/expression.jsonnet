@@ -25,6 +25,6 @@ record("Expression") + {
     field("engine", [JsonPointer, Avro.string]),
 
     doc("The code to be executed by the expression engine.") +
-    field("script", Avro.string)
-  ]
+    field("script", Avro.string),
+  ],
 }

@@ -10,11 +10,11 @@ local Binding = CWL.classes.Binding;
 local Schema = CWL.classes.Schema;
 
 Schema + record("InputSchema") {
-  fields +: [ 
+  fields+: [
     doc(|||
       Describes how to handle a value in the input object convert it into a
       concrete form for execution, such as command line parameters.
     |||) +
-    field("inputBinding", [Avro.Null, Binding])
-  ]
+    field("inputBinding", [Avro.Null, Binding]),
+  ],
 }

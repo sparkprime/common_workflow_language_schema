@@ -11,5 +11,5 @@ doc(|||
 
 enum("LinkMergeMethod", [
   "MERGE_NESTED",
-  "MERGE_FLATTENED"
+  "MERGE_FLATTENED",
 ])

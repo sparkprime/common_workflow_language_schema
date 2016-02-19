@@ -20,8 +20,8 @@ doc(|||
 |||) +
 
 ProcessRequirement + record("SchemaDefRequirement") {
-  fields +: [
+  fields+: [
     doc("The list of type definitions") +
     field("types", Avro.array([SchemaDef])),
-  ]
+  ],
 }

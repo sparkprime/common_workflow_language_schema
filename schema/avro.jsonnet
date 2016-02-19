@@ -12,7 +12,7 @@ local util = import "util.jsonnet";
   record(name)::
     {
       name: name,
-      type: "record"
+      type: "record",
     },
 
   enum(name, symbols)::

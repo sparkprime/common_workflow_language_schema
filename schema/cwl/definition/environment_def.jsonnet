@@ -21,5 +21,5 @@ record("EnvironmentDef") {
 
     doc("The environment variable value.") +
     field("envValue", [Avro.string, Expression]),
-  ]
+  ],
 }
